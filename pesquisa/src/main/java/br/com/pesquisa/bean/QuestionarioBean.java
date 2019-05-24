@@ -136,7 +136,6 @@ public class QuestionarioBean implements Serializable {
 	private GenericDao<Q27> q27Dao;
 	private GenericDao<Q28> q28Dao;
 	private GenericDao<Q29> q29Dao;
-	
 
 	public QuestionarioBean() {
 		q1Dao = new GenericDao<>();
@@ -173,10 +172,10 @@ public class QuestionarioBean implements Serializable {
 
 	public void salvar() throws Exception {
 		try {
-			
+
 			q1 = new Q01(altQ1);
 			q1Dao.salvar(q1);
-			
+
 			q2 = new Q02(altQ2);
 			q2Dao.salvar(q2);
 
@@ -189,7 +188,6 @@ public class QuestionarioBean implements Serializable {
 			q5 = new Q05(altQ5);
 			q5Dao.salvar(q5);
 
-		
 			q6 = new Q06(altQ6);
 			q6Dao.salvar(q6);
 
@@ -258,15 +256,14 @@ public class QuestionarioBean implements Serializable {
 
 			q27 = new Q27(altQ27);
 			q27Dao.salvar(q27);
-			
+
 			q28 = new Q28(altQ28);
 			q28Dao.salvar(q28);
 
 			q29 = new Q29();
 			q29.setComentario(comentarios);
 			q29Dao.salvar(q29);
-		
-			
+
 			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
 
 		} catch (Exception e) {

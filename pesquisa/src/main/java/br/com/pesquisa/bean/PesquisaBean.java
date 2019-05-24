@@ -24,9 +24,15 @@ public class PesquisaBean implements Serializable {
 	public void iniciarPesquisa() {
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("questionario.xhtml");
-			System.out.println("Deu certo");
 		} catch (IOException e) {
-				System.out.println("Erro");
+			e.printStackTrace();
+		}
+	}
+	
+	public void estatistica() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("estatistica.xhtml");
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

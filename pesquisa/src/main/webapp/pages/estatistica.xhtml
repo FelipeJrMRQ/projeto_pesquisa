@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:pm="http://primefaces.org/mobile">
+
+<ui:composition template="/template/template2.xhtml">
+	<ui:define name="conteudo">
+		<p:growl id="mensagem" />
+
+
+
+		<!-- 
+			################## Historico de modificações do sistema ########################
+			1 - Adaptar novo modelo de placas mercosul no sistema  [FEITO]
+			2 - Permitir Alteração da placa do veiculo no registro de saída [FEITO]
+		 -->
+
+		<div class="container">
+			<div class="nav justify-content-start mt-3">
+				<img src="logo.png" alt="Teste" width="250" height="60"></img>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="mt-3">
+						<p class="nav justify-content-center p-2 btn bg-dark text-white font-weight-bold font-size">Estatísticas sobre a pesquisa </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<h:form id="frmChart">
+					<div class="ml-2 float-left">
+						<p:outputLabel id="Q1" value="Q1" styleClass="ml-2">
+							<p:tooltip for="Q1">
+								<p:outputLabel value="Tempo de serviço na empresa?" />
+								<br />
+							</p:tooltip>
+						</p:outputLabel>
+						<p:chart type="pie" model="#{chartView.q1}" style="width:350px; heigth:200px"></p:chart>
+					</div>
+					<div class="float-left">
+						<p:outputLabel id="Q2" value="Q2" styleClass="ml-2">
+							<p:tooltip for="Q2" value="Idade?" />
+						</p:outputLabel>
+						<p:chart type="pie" model="#{chartView.q2}" style="width:350px; heigth:200px"></p:chart>
+					</div>
+					<div class="float-left">
+						<p:outputLabel id="Q3" value="Q3" styleClass="ml-2">
+							<p:tooltip for="Q3" value="Escolaridade?" />
+						</p:outputLabel>
+						<p:chart type="pie" model="#{chartView.q2}" style="width:350px; heigth:200px"></p:chart>
+					</div>
+					<div class="float-left">
+						<p:outputLabel id="Q4" value="Q4" styleClass="ml-2" style="width:350px; heigth:200px">
+							<p:tooltip for="Q4" value="Sexo?" />
+						</p:outputLabel>
+						<p:chart type="bar" model="#{chartView.q4}" style="width:350px; heigth:200px"></p:chart>
+					</div>
+					<div class="float-left">
+						<p:outputLabel id="Q5" value="Q2" styleClass="ml-2">
+							<p:tooltip for="Q5" value="Idade?" />
+						</p:outputLabel>
+						<p:chart type="pie" model="#{chartView.q2}" style="width:350px; heigth:200px"></p:chart>
+					</div>
+
+					<div style="clear: both;"></div>
+					<h:commandButton action="update" value="Atualizar" styleClass="btn btn-success ml-3 " />
+				</h:form>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>
+</html>
