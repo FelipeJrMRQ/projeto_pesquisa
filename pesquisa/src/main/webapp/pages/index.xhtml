@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:pm="http://primefaces.org/mobile">
+
+<ui:composition template="/template/template2.xhtml">
+	<ui:define name="conteudo">
+		<p:growl id="mensagem" />
+
+
+
+		<!-- 
+			################## Historico de modificações do sistema ########################
+			1 - Adaptar novo modelo de placas mercosul no sistema  [FEITO]
+			2 - Permitir Alteração da placa do veiculo no registro de saída [FEITO]
+		 -->
+
+		<div class="container">
+			<div class="nav justify-content-start mt-3">
+				<img src="logo.png" alt="Teste" width="250" height="60"></img>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="mt-3">
+						<p class="nav justify-content-center btn bg-dark p-2 text-white font-weight-bold font-size">Pesquisa de percepção de clima</p>
+					</div>
+
+					<div class="mt-2">
+						<p>Para que continuemos a melhorar ainda mais nossa empresa, precisamos ouvir a sua opinião.</p>
+						<p>
+							A pesquisa de percepção de clima tem por objetivo entender a sua satisfação em relação a alguns aspectos de nossa <b>empresa</b>, por isso é fundamental que seja o mais verdadeiro possível em suas respostas
+						</p>
+						<p>A partir delas conseguiremos identificar nossos pontos fortes e aqueles que ainda precisamos melhorar.</p>
+						<p>
+							Nosso objetivo é fazer com que nossa <b>empresa</b> seja a melhor possível para se trabalhar
+						</p>
+						<p:separator></p:separator>
+						<h:form styleClass="form-group mb-0">
+							<div class="nav justify-content-start">
+								<h:commandButton action="#{pesquisaBean.iniciarPesquisa()}" value="Iniciar pesquisa" styleClass="btn btn-success" />
+							</div>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</ui:define>
+</ui:composition>
+</html>

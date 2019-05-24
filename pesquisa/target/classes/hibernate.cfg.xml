@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Confugurações de conexao com o banco de dadados -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bd_croma?useTimezone=true&amp;serverTimezone=GMT-3&amp;autoReconnect=true</property> -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bd_pesquisa?useTimezone=true&amp;serverTimezone=GMT-3</property>
+
+		<!-- ?useTimezone=true&amp;serverTimezone=GMT-3 -->
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<!-- <property name="hibernate.connection.pool_size">10</property> -->
+		<property name="hibernate.c3p0.min_size">25</property>
+		<property name="hibernate.c3p0.max_size">150</property>
+		<property name="hibernate.c3p0.acquire_increment">5</property>
+		<property name="hibernate.c3p0.timeout">25</property>
+		<property name="hibernate.c3p0.idle_test_period">30</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+
+
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Mostra os comandos SQL no console -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Formata corretamente a exibição do sql -->
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Cria as tabelas no banco de dados -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- <property name="hibernate.hbm2ddl.import_files">/WEB-INF/sql/usuario.sql</property> -->
+
+		<mapping class="br.com.pesquisa.model.Q01" />
+		<mapping class="br.com.pesquisa.model.Q02" />
+		<mapping class="br.com.pesquisa.model.Q03" />
+		<mapping class="br.com.pesquisa.model.Q04" />
+		<mapping class="br.com.pesquisa.model.Q05" />
+		<mapping class="br.com.pesquisa.model.Q06" />
+		<mapping class="br.com.pesquisa.model.Q07" />
+		<mapping class="br.com.pesquisa.model.Q08" />
+		<mapping class="br.com.pesquisa.model.Q09" />
+		<mapping class="br.com.pesquisa.model.Q10" />
+		<mapping class="br.com.pesquisa.model.Q11" />
+		<mapping class="br.com.pesquisa.model.Q12" />
+		<mapping class="br.com.pesquisa.model.Q13" />
+		<mapping class="br.com.pesquisa.model.Q14" />
+		<mapping class="br.com.pesquisa.model.Q15" />
+		<mapping class="br.com.pesquisa.model.Q16" />
+		<mapping class="br.com.pesquisa.model.Q17" />
+		<mapping class="br.com.pesquisa.model.Q18" />
+		<mapping class="br.com.pesquisa.model.Q19" />
+		<mapping class="br.com.pesquisa.model.Q20" />
+		<mapping class="br.com.pesquisa.model.Q21" />
+		<mapping class="br.com.pesquisa.model.Q22" />
+		<mapping class="br.com.pesquisa.model.Q23" />
+		<mapping class="br.com.pesquisa.model.Q24" />
+		<mapping class="br.com.pesquisa.model.Q25" />
+		<mapping class="br.com.pesquisa.model.Q26" />
+		<mapping class="br.com.pesquisa.model.Q27" />
+		<mapping class="br.com.pesquisa.model.Q28" />
+		<mapping class="br.com.pesquisa.model.Q29" />
+		
+	</session-factory>
+</hibernate-configuration>
