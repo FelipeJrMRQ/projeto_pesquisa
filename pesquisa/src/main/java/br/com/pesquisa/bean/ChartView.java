@@ -1,13 +1,13 @@
 package br.com.pesquisa.bean;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
-import org.primefaces.model.chart.Axis;
-import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.BarChartModel;
 import org.primefaces.model.chart.ChartSeries;
 import org.primefaces.model.chart.PieChartModel;
@@ -63,6 +63,7 @@ public class ChartView implements Serializable {
 		q2.setDiameter(100);
 	}
 
+	@SuppressWarnings("unused")
 	private void createPieModelQ3() {
 		q1 = new PieChartModel();
 		q1.set("Menos de 6 meses", 30);
@@ -89,6 +90,15 @@ public class ChartView implements Serializable {
 		q4.addSeries(m);
 		q4.addSeries(f);
 		return q4;
+	}
+	
+	public void voltar() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	private void createBarModelQ4() {
